@@ -1,0 +1,28 @@
+
+<button ng-click="saveAvailability()" class="btn btn-success">Save Availability</button>
+<br>
+<br>
+<tabset>
+    <tab ng-repeat="day in availObj" heading="{{day.name}}" active="tab.active" disable="tab.disabled">
+      <input type="checkbox" ng-model="noAvail[$index]" ng-change="changeAvail($index)"> No Availability
+		<div ng-hide="noAvail[$index]">
+			<ul>
+			<li ng-repeat="tm in day.times"><timepicker ng-model="day.times[$index]" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker><br><span ng-show="$even"> until</span><button class="btn btn-sm btn-default" ng-show="$odd&& $last" ng-click="addTime($parent.$index, $index)">Add Time Frame</button></li>
+		</ul>
+		</div>
+    </tab>
+</tabset>
+<!--
+<div class="availability-holder">
+	<div ng-repeat="day in availObj" class="availability-day">
+		<h6>{{day.name}}</h6>
+		<input type="checkbox" ng-model="noAvail[$index]"> No Availability
+		<div ng-hide="noAvail[$index]">
+			<ul>
+			<li ng-repeat="tm in day.times"><timepicker ng-model="day.times[$index]" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker><br><span ng-show="$even"> until</span><button class="btn btn-sm btn-default" ng-show="$odd && $last" ng-click="addTime($parent.$index, $index)">Add Time Frame</button></li>
+		</ul>
+		</div>
+	</div>
+</div>
+-->
+

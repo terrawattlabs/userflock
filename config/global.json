@@ -1,0 +1,18 @@
+{
+  "global": {
+    "parseVersion": "1.5.0"
+  },
+  "applications": {
+    "UserFlockDev": {
+      "applicationId": "9zkmo8qAooJZatU4rcbBtSuEBudGV8QJNlTWE0Uu",
+      "masterKey": "hNvrzCwx9bBqUVgh5afHWb5P6OyoU9QR2ISKRIu7"
+    },
+    "UserFlock": {
+            "applicationId": "of4FE9i9ksAsqxrDUsjw8VxnjSJRwjXatTnM89px", 
+            "masterKey": "K7OkwVcQyw8xCRlLUPz86RbJkToFpyxmk72N1RJK"
+        },
+    "_default": {
+      "link": "UserFlockDev"
+    }
+  }
+}

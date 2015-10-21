@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UserFlock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--     <meta name="google-site-verification" content="prvcE6ZEZUxBLHWr6QLGY_D5tpZAPEhxloZpGBoABag" /> -->
+    <meta name="description" content="UserFlock - Customer Development Made Easy!">
+    <script src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
+
+    
+    <!-- This is for production!!!!! Change before deploying to PROD!!!!!!!!!! -->
+	  <script type="text/javascript">
+	     Parse.initialize("of4FE9i9ksAsqxrDUsjw8VxnjSJRwjXatTnM89px", "j9uIoz83OtawVz7agJCmnGY8ZOCpkuLChgwefCS7");
+	  </script>
+    
+  
+
+    <!-- THIS IS FOR DEVELOPMENT!!! CHANGE BEFORE DEPLOYING-->
+    <script type="text/javascript">
+    //   Parse.initialize("9zkmo8qAooJZatU4rcbBtSuEBudGV8QJNlTWE0Uu", "pxX9XEctUMbsqFT4WrblGZGInhFhK9g22vTTJhbY");
+     </script>
+    
+
+	<script type="text/javascript" src="//static.twilio.com/libs/twiliojs/1.1/twilio.min.js"></script>
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script type="text/javascript">
+          // This identifies your website in the createToken call below
+          //LIVE MODE
+          Stripe.setPublishableKey('pk_live_dFFC8lBJFAqJDJtoCvwYCI2F');
+          // ...
+
+
+          //TEST MODE ---------------------------------------------------------------------------------------------------------------
+         // Stripe.setPublishableKey('pk_test_DhXdCdLp0wUqBc5yqbdKDBJi');
+    // </script>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <script src="assets/Flat-UI-master/js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="scripts/fullcalendar-2.3.2/lib/jquery-ui.custom.min.js"></script> 
+
+<!-- momentJS -->
+
+<script type="text/javascript" src="scripts/momentjs/moment.min.js"></script>
+<!--<script type="text/javascript" src="scripts/momentjs/moment-timezone.min.js"></script>-->
+<script type="text/javascript" src="scripts/momentjs/moment-timezone-with-data-2010-2020.min.js"></script>
+<script type="text/javascript" src="scripts/momentjs/jstz-1.0.4.min.js"></script>
+
+
+<!-- calendar -->
+    <!-- <script type="text/javascript" src="scripts/fullcalendar-2.3.2/lib/moment.min.js"></script>
+    // <script type="text/javascript" src="scripts/fullcalendar-2.3.2/lib/moment-timezone.js"></script>
+    // <script type="text/javascript" src="scripts/fullcalendar-2.3.2/lib/moment-timezone-data.js"></script> -->
+    <script type="text/javascript" src="scripts/fullcalendar-2.3.2/fullcalendar.js"></script> 
+
+
+    <!--angular stuff -->
+    <script type="text/javascript" src="scripts/angular/angular.js"></script>
+    <script type="text/javascript" src="scripts/angular/angular-cookies.js"></script>
+    <script type="text/javascript" src="scripts/angular/angular-resource.js"></script>
+    <script type="text/javascript" src="scripts/angular/angular-sanitize.js"></script>
+    <script type="text/javascript" src="scripts/angular/angular-route.js"></script>
+    <script type="text/javascript" src="scripts/angular/angular-animate.js"></script>
+    <script type="text/javascript" src="scripts/angular/angular-growl/build/angular-growl.js"></script>
+    <script type="text/javascript" src="assets/angulartics-0.15.20/dist/angulartics.min.js"></script>
+    <script type="text/javascript" src="assets/angulartics-0.15.20/dist/angulartics-ga.min.js"></script>
+    <script type="text/javascript" src="scripts/angular/ng-audio.min.js"></script>
+    <script type="text/javascript" src="scripts/angular/ui-bootstrap-tpls-0.11.0.js"></script>
+    <script type="text/javascript" src="scripts/angular/angular-payments.js"></script>
+    <script type="text/javascript" src="scripts/angular-ui-select/dist/select.js"></script>
+    <script type="text/javascript" src="scripts/angular-widget.js"></script>
+    <script type="text/javascript" src="scripts/scrollspydirectives.js"></script>
+    <script type="text/javascript" src="scripts/angular/angular-tour-tpls.js"></script>
+    <script type="text/javascript" src="scripts/calendar.js"></script>
+    <script type="text/javascript" src="scripts/date.js"></script>
+  
+
+
+    <!-- include the app files -->
+    <script type="text/javascript" src="scripts/app.js"></script>
+
+
+
+    <script type="text/javascript" src="scripts/controllers.js"></script>
+    <script type="text/javascript" src="scripts/controllers/scheduleCtrl.js"></script>
+    <script type="text/javascript" src="scripts/controllers/availabilityCtrl.js"></script>
+    <script type="text/javascript" src="scripts/controllers/setupCtrl.js"></script>
+     <script type="text/javascript" src="scripts/controllers/navCtrl.js"></script>
+     <script type="text/javascript" src="scripts/controllers/testPageCtrl.js"></script>
+     <script type="text/javascript" src="scripts/controllers/settingsCtrl.js"></script>
+     <script type="text/javascript" src="scripts/controllers/takenotesCtrl.js"></script>
+     <script type="text/javascript" src="scripts/controllers/phoneCtrl.js"></script>
+     <script type="text/javascript" src="scripts/controllers/interviewDetailCtrl.js"></script>
+
+  <!-- Services -->
+     <script type="text/javascript" src="scripts/services/services.js"></script>
+
+
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/rangy/1.2.3/rangy-core.js"></script>
+
+	  <script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.2.2/textAngular-sanitize.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.2.2/textAngular.min.js'></script>
+    
+
+
+	<!--include CSS -->
+
+    <link href="assets/Flat-UI-master/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/Flat-UI-master/bootstrap/css/prettify.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="scripts/angular/angular-growl/build/angular-growl.min.css">
+    <link rel="stylesheet" href="scripts/angular-ui-select/dist/select.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.css">
+    <!--<script type="text/javascript" src="styles/ng-audio.min.css"></script>-->
+
+    <!-- Loading Flat UI -->
+  
+  <link href="assets/Flat-UI-master/css/flat-ui.css" rel="stylesheet">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+  <link rel="stylesheet" type="text/css" href="styles/mobile.css" media="only screen and (max-width: 1000px)">
+  <link rel="stylesheet" type="text/css" href="styles/angular-tour.css">
+  <link rel="stylesheet" type="text/css" href="scripts/fullcalendar-2.3.2/fullcalendar.css">
+    <link rel="stylesheet" type="text/css" href="scripts/fullcalendar-2.3.2/fullcalendar.print.css">
+
+  <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body ng-app="ufApp">
+   <div ng-include="'views/partials/nav.html'"></div>
+   <!--
+   <div ng-include="'views/partials/phone.html'"></div>	-->
+   <div class="container" ng-view=""></div>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43624363-9', 'auto');
+  //line below deleted for angulartics
+  //ga('send', 'pageview');
+
+</script>
+
+<div growl></div>
+
+</body>
+
+    
+    <script src="assets/Flat-UI-master/js/bootstrap.min.js"></script>
+    <script src="assets/Flat-UI-master/js/bootstrap-select.js"></script>
+    <script src="assets/Flat-UI-master/js/bootstrap-switch.js"></script>
+    <script src="assets/Flat-UI-master/js/flatui-checkbox.js"></script>
+    <script src="assets/Flat-UI-master/js/flatui-radio.js"></script>
+    <script src="assets/Flat-UI-master/js/jquery.tagsinput.js"></script>
+    <script src="assets/Flat-UI-master/js/jquery.placeholder.js"></script>
+    <script src="assets/Flat-UI-master/js/typeahead.js"></script>
+    <script src="assets/Flat-UI-master/bootstrap/js/google-code-prettify/prettify.js"></script>
+    <script src="assets/Flat-UI-master/js/application.js"></script>
+</html>

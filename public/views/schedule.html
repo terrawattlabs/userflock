@@ -1,0 +1,49 @@
+
+<div class="schedule-whole">
+		<div class="schedule-whole-child">
+			<img class="schedule-img" ng-src="{{imgURL}}"/>
+		</div>
+		<div collapse="!timeSelectCollapse" class="schedule-whole-child time-list" ng-hide="showSuccess">
+	 		<p>{{chosenTimeFormat}} - <a ng-click="changeCollapse()">Change</a></p>
+	 	</div>
+		<div class="schedule-whole-child time-list" collapse="timeSelectCollapse">
+			<h5 >Select a time</h5>
+			<!--
+			<a href=""><img id="arrow-img" src="http://www.picgifs.com/graphics/a/arrows/graphics-arrows-418091.gif" border="0" /></a>-->
+
+			<a href=""><img id="arrow-img-static" src="http://www.clker.com/cliparts/y/m/X/o/s/R/down-arrow-circle-hi.png" border="0" /></a>
+	 		<ul style="list-style-type: none">
+				<li ng-repeat="block in blocks | limitTo: slotLimit"><a ng-click="selected($index)">{{ block.slot["userTime"]}}</a></li>
+				<li><a ng-click="showMore()">Show More Available Times</a></li>
+			</ul>
+		</div>
+		<div class="schedule-whole-child" collapse="inputFormCollapse">
+			<div>
+				<p>Great! Just a little more info:</p>
+				<label class="input-label" for="name">Name:</label>
+				<input class="form-control main-input" type="text" name="name" ng-model="user_name"/>
+				
+				<label class="input-label" for="email">Email:</label>
+				<input class="form-control main-input" type="text" name="email" ng-model="user_email"/>
+
+				<label class="input-label" for="user_notes">Anything we should know before our conversation?</label>
+				<input class="form-control main-input" type="text" name="user_notes" ng-model="user_notes"/>
+				<br>
+				<button ng-click="bookSlot()" class="btn btn-primary btn-lg login-button" ng-disabled="submitButton">Book it already! <span class="glyphicon glyphicon-ok-sign"></span></button>
+			</div>
+		</div>
+		<div class="schedule-whole-child">
+			<div ng-show="showSuccess">
+				<h3>You're all set!</h3>
+				<p>All of these details have been sent to <strong>{{user_email}}</strong></p>
+				<ul>
+					<li>On <strong>{{chosenTimeFormat}}</strong>, please call this number: <strong>{{cust_phone}}</strong></li>
+					<li>You'll be speaking with <strong>{{cust_name}}</strong></li>
+					<li>If you have questions, you can email them: <a href="mailto:{{cust_email}}">{{cust_email}}</a></li>
+				</ul>
+			</div>
+		</div>
+</div>
+
+<a href="http://www.userflock.com" target="blank" class="powered-by-link">Powered by UserFlock</a>
+<!-- <div ui-calendar="uiConfig.calendar" class="calendar" ng-model="eventSources"></div>  -->
