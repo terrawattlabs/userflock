@@ -23,4 +23,14 @@ Primary Take-Away <input class="form-control" ng-model="takeaway"></input><br>
 	<button type="submit" class="btn btn-lg btn-success">Save</button>
 </form>
 	<button type="button" class="btn btn-lg btn-default" ng-click="goToPage('/projdetail/' + selprojectID)">Return to Project</button>
+	<button type="button" class="btn btn-lg btn-default" ng-click="showSend()">Send to Teammate</button>
+	<div ng-show="send">
+		<label for="toEmail">Send To: <i>One email at a time, please :)</i></label>
+		<input class="form-control" ng-model="toEmail" style="max-width: 20em;" id="toEmail"/>
+
+		<label for="addMsg">Add a message:</label>
+		<input class="form-control" ng-model="addMsg" style="max-width: 20em;" id="addMsg"/>
+
+		<button type="button" class="btn btn-lg btn-default" ng-click="sendInterview()">Send to Teammate</button>
+	</div>
 

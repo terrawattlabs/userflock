@@ -830,9 +830,19 @@ border-radius:20px;
 	width: 100%;
 }
 
+.schedule-footer-holder {
+	display: flex;
+	justify-content: space-between;
+}
+
 .powered-by-link {
 	color: #95a5a6;
 	font-style: italic;
+}
+
+#timezone-id {
+	color: black;
+	font-size: .8em;
 }
 
 

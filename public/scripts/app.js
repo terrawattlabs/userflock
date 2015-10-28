@@ -77,6 +77,10 @@ angular
         templateUrl: 'views/interviewdetail.html',
         controller: 'InterviewDetailCtrl'
       })
+      .when('/interviewro/:projectID/:selID', {
+        templateUrl: 'views/interviewReadOnly.html',
+        controller: 'InterviewDetailCtrl'
+      })
       .when('/intquestions/:projID/:questID', {
         templateUrl: 'views/intquestions.html',
         controller: 'IntQuestionsCtrl'

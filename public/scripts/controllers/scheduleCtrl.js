@@ -5,6 +5,8 @@ ufApp.controller('ScheduleCtrl',
     // determine client's current zone  
     var z = jstz.determine();
     var clientZone = z.name();
+
+    $scope.clientZone = clientZone;
  
     
 $scope.slotLimit = 4;

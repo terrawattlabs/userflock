@@ -4,6 +4,7 @@ ufApp.controller('InterviewDetailCtrl',
 
    		$scope.selprojectID = $routeParams.projectID;
    		$scope.oneAtATime = true;
+   		$scope.intID = $routeParams.selID;
 
    		var isOpera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
     // Opera 8.0+ (UA detection to detect Blink/v8-powered Opera)
@@ -216,5 +217,44 @@ if (isFirefox) {
     		$scope.updateNotes();
     	};
     };
+
+    $scope.send = false;
+
+    $scope.showSend = function(){
+    	$scope.send = !$scope.send;
+    };
+
+   $scope.sendInterview = function (){
+
+   		var link = "http://userflock.parseapp.com/#/interviewro/" + $scope.selprojectID + "/" + $scope.intID;
+
+   		 Parse.Cloud.run('sendEmail', {
+            "recipient": $scope.toEmail,
+            "sender": "hello@userflock.com",
+            "subject": currentUser.get('name') +  " has sent you a link to an interview they did with " + $scope.name + "!",
+            "bodyHTML": "<p>Hi,</p>" + 
+            "<p>Looks like your teammate <strong>" + currentUser.get('name') + "<strong> has sent you a link to an interview they did with <strong>" +$scope.name + "</strong>.</p>" +
+            "<p><a href='" + link +"'>Click here to view the notes and listen to the recording.</a></p>" +
+            "<p>They also added a message for you:</p>" +
+            "<p><strong>" + $scope.addMsg + "</strong></p>" +
+            "<p>Thanks!</p>" +
+            "<p>The UserFlock Team!</p>"
+
+        }, {
+          success: function(result) {
+            // console.log(result);
+            $scope.send = false;
+            $scope.toEmail = "";
+            $scope.addMsg = "";
+            growl.addSuccessMessage("Message was sent.");
+
+        
+        },
+          error: function(error) {
+            // console.log(error);
+          }
+        });
+
+   };
 
 }]);

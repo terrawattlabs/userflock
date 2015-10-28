@@ -1,0 +1,24 @@
+<h3>Interview with {{name}}</h3>
+
+<div class="intdetail-top">
+	<div>
+		{{name}}<br>
+		Date: {{ readableDate }}
+	</div>
+	<div>
+		
+		<rating ng-model="rate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>
+		<span class="label" ng-show="overStar" style="color:black">{{helper}}</span><br><br>
+		<audio type="audio/mp3" controls="controls" id="recordingPlayer"></audio>
+	</div>
+</div>
+<br>
+<h4>Primary Take-Away:</h4> {{takeaway}}<br>
+<br>
+<!--
+<a ng-click="toggleNotes()">{{toggleMsg}}</a>
+<div ng-hide="editable" ng-bind-html="notes"></div>-->
+
+<h4>Notes:</h4>
+<div ng-bind-html="notes"></div>
+
