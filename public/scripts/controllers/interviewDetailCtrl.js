@@ -233,7 +233,7 @@ if (isFirefox) {
             "sender": "hello@userflock.com",
             "subject": currentUser.get('name') +  " has sent you a link to an interview they did with " + $scope.name + "!",
             "bodyHTML": "<p>Hi,</p>" + 
-            "<p>Looks like your teammate <strong>" + currentUser.get('name') + "<strong> has sent you a link to an interview they did with <strong>" +$scope.name + "</strong>.</p>" +
+            "<p>Looks like your teammate <strong>" + currentUser.get('name') + "</strong> has sent you a link to an interview they did with <strong>" +$scope.name + "</strong>.</p>" +
             "<p><a href='" + link +"'>Click here to view the notes and listen to the recording.</a></p>" +
             "<p>They also added a message for you:</p>" +
             "<p><strong>" + $scope.addMsg + "</strong></p>" +
