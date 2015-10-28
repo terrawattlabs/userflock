@@ -9,15 +9,15 @@
 
     
     <!-- This is for production!!!!! Change before deploying to PROD!!!!!!!!!! -->
-	  <script type="text/javascript">
-	     Parse.initialize("of4FE9i9ksAsqxrDUsjw8VxnjSJRwjXatTnM89px", "j9uIoz83OtawVz7agJCmnGY8ZOCpkuLChgwefCS7");
-	  </script>
+	  // <script type="text/javascript">
+	  //    Parse.initialize("of4FE9i9ksAsqxrDUsjw8VxnjSJRwjXatTnM89px", "j9uIoz83OtawVz7agJCmnGY8ZOCpkuLChgwefCS7");
+	  // </script>
     
   
 
     <!-- THIS IS FOR DEVELOPMENT!!! CHANGE BEFORE DEPLOYING-->
     <script type="text/javascript">
-    //   Parse.initialize("9zkmo8qAooJZatU4rcbBtSuEBudGV8QJNlTWE0Uu", "pxX9XEctUMbsqFT4WrblGZGInhFhK9g22vTTJhbY");
+      Parse.initialize("9zkmo8qAooJZatU4rcbBtSuEBudGV8QJNlTWE0Uu", "pxX9XEctUMbsqFT4WrblGZGInhFhK9g22vTTJhbY");
      </script>
     
 
@@ -26,12 +26,12 @@
     <script type="text/javascript">
           // This identifies your website in the createToken call below
           //LIVE MODE
-          Stripe.setPublishableKey('pk_live_dFFC8lBJFAqJDJtoCvwYCI2F');
+          // Stripe.setPublishableKey('pk_live_dFFC8lBJFAqJDJtoCvwYCI2F');
           // ...
 
 
           //TEST MODE ---------------------------------------------------------------------------------------------------------------
-         // Stripe.setPublishableKey('pk_test_DhXdCdLp0wUqBc5yqbdKDBJi');
+         Stripe.setPublishableKey('pk_test_DhXdCdLp0wUqBc5yqbdKDBJi');
     // </script>
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

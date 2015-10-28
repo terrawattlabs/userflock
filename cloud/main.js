@@ -4,19 +4,19 @@ var express = require('express');
 
 var Stripe = require('stripe');
 // LIVE KEY
-Stripe.initialize('sk_live_dSuXyZyDNfjbsPWcqvb1gvwn');
+// Stripe.initialize('sk_live_dSuXyZyDNfjbsPWcqvb1gvwn');
 
 
 //TEST KEY
-// Stripe.initialize('sk_test_KafbBA9GOX5cnbsn5QxP11GO');
+Stripe.initialize('sk_test_KafbBA9GOX5cnbsn5QxP11GO');
 
 // call recording endpoints
 
 //test 
-// var endpoint = "http://userflockdev.parseapp.com/";
+var endpoint = "http://userflockdev.parseapp.com/";
 
 //live
-var endpoint = "http://userflock.parseapp.com/";
+// var endpoint = "http://userflock.parseapp.com/";
 
 
 var SendGrid = require("sendgrid");  
